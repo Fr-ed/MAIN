@@ -54,3 +54,15 @@ test('Throws error if you try to add duplicate item to shopping cart', () => {
   shoppingCart.addItem(item);
   expect(() => shoppingCart.addItem(item)).toThrowError('Item already exists');
 });
+
+
+test('Throws error', () => {
+  const shoppingCart = new ShoppingCart();
+  const item = {
+    id: 1,
+    name: 'T-shirt',
+    price: 10,
+  };
+  shoppingCart.addItem(item);
+  expect(() => shoppingCart.addItem(item)).toThrowError('Item already exists');
+});
